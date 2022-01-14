@@ -12,7 +12,7 @@ len(data)
 
 #If there is a zero we replace it with mean value
 no_zero=['BloodOxy','Age','Temperature']
-for column in no_zero:
+for col in no_zero:
     data[col]=data[col].replace(0,np.NaN)
     mean=int(data[col].mean(skipna=True))
     data[col]=data[col].replace(np.NaN,mean)
